@@ -1,0 +1,11 @@
+<configuration scan="true">
+	<include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+	<logger name="com.bonds4all" level="debug"/>
+
+	<!--debug SQL statements-->
+	<!--<logger name="org.hibernate.SQL" level="debug" />-->
+	<!--debug SQL arguments-->
+	<!--<logger name="org.hibernate" level="trace" />-->
+
+</configuration>
