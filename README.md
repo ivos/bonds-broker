@@ -5,6 +5,11 @@ This is Bonds Broker backend application of a fictional Bonds4All.com company.
 It's a BNP Paribas Cardif Java developer coding test sample application.
 
 
+## FSD
+
+**Please start by reading [the Functional Specification Document](./FSD.md).**
+
+
 ## Tech stack
 
 - Java 8
@@ -48,3 +53,8 @@ To re-create the database tables after a new DB migration has been introduced:
 To execute all Integration tests:
 
     ./mvnw -Pit
+
+
+## TODO
+
+Lit of issues to resolve: [TODO](./TODO.md).
