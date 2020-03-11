@@ -1,0 +1,9 @@
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../../../dataset.xsd">
+
+	<!--created-->
+	<bonds id="$bondId" name="name 1" start_date="@date" amount="999.9" reference="@any"/>
+	<bond_terms id="@any" bond_id="$bondId" effective_time="@timestamp" end_date="@date+P5Y" interest_rate="0.05"/>
+	<ip_address_requests id="@any" ip="@any" effective_date="@date"/>
+
+</dataset>

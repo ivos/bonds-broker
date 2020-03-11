@@ -67,10 +67,10 @@ of a fictional Bonds4All.com company.
 - 1a. Start date < today:
     - 1a1. System rejects the request with error "Start date must not be in past".
 - 1b. End date < Start date + 5 years:
-    - 1b1. System rejects the request with error "Bond term must be at least 5 years".
+    - 1b1. System rejects the request with error "Bond term length is too short".
 - 1c. System local time is 2200-0600 and Amount > 1000:
     - 1c1. System rejects the request with error "Legal requirement violated: time and amount".
-- 1d. Number of previous bonds bought on the current system local date from the same client IP address > 5:
+- 1d. Number of previous bonds bought on the current system local date from the same client IP address >= 5:
     - 1d1. System rejects the request with error "Legal requirement violated: too many bonds from IP address".
 
 ### Operation: Adjust bond `PATCH /bonds/{reference}`

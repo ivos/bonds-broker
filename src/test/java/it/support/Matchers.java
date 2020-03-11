@@ -13,27 +13,6 @@ import static org.junit.Assert.assertEquals;
 
 public class Matchers {
 
-	public static RegexMatcher patternMatch(String expected) {
-		return new RegexMatcher(expected);
-	}
-
-	public static class RegexMatcher extends BaseMatcher<String> {
-		private final String regex;
-
-		public RegexMatcher(String regex) {
-			this.regex = regex;
-		}
-
-		@Override
-		public boolean matches(Object o) {
-			return ((String) o).matches(regex);
-		}
-
-		public void describeTo(Description description) {
-			description.appendText("matches regex = " + regex);
-		}
-	}
-
 	/**
 	 * Wraps {@link IsEqual} matcher
 	 * and calls {@link org.junit.Assert#assertEquals(Object, Object)} when the values are not equal.

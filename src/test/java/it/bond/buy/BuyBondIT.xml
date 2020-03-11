@@ -1,0 +1,8 @@
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../../../dataset.xsd">
+
+	<!--empty DB-->
+	<bonds/>
+	<ip_address_requests/>
+
+</dataset>

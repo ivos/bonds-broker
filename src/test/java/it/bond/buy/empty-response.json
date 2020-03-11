@@ -1,0 +1,25 @@
+{
+  "timestamp": "REPLACED",
+  "status": 422,
+  "error": "Unprocessable Entity",
+  "path": "/api/bonds",
+  "errors": [
+    {
+      "path": "amount",
+      "value": null,
+      "errorCode": "must not be null"
+    }, {
+      "path": "endDate",
+      "value": null,
+      "errorCode": "must not be null"
+    }, {
+      "path": "name",
+      "value": null,
+      "errorCode": "must not be null"
+    }, {
+      "path": "startDate",
+      "value": null,
+      "errorCode": "must not be null"
+    }
+  ]
+}

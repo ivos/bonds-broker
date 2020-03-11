@@ -1,0 +1,13 @@
+{
+  "timestamp": "REPLACED",
+  "status": 422,
+  "error": "Unprocessable Entity",
+  "path": "/api/bonds",
+  "errors": [
+    {
+      "path": "amount",
+      "value": 1000.1,
+      "errorCode": "legal requirement violated: time and amount"
+    }
+  ]
+}

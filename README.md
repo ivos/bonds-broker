@@ -40,7 +40,9 @@ To run the application from sources:
 
 Then press `CTRL-C` to stop the application.
 
-While the app is running, you can execute individual Integration tests.
+While the app is running, you can:
+- Access its homepage at [http://localhost:8080/](http://localhost:8080/)
+- Execute individual Integration tests
 
 ### Re-create the database
 

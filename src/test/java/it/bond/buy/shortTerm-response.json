@@ -1,0 +1,13 @@
+{
+  "timestamp": "REPLACED",
+  "status": 422,
+  "error": "Unprocessable Entity",
+  "path": "/api/bonds",
+  "errors": [
+    {
+      "path": "endDate",
+      "value": "2025-03-03",
+      "errorCode": "bond term length is too short"
+    }
+  ]
+}

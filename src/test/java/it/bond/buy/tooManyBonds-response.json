@@ -1,0 +1,13 @@
+{
+  "timestamp": "REPLACED",
+  "status": 422,
+  "error": "Unprocessable Entity",
+  "path": "/api/bonds",
+  "errors": [
+    {
+      "path": null,
+      "value": null,
+      "errorCode": "legal requirement violated: too many bonds from IP address"
+    }
+  ]
+}

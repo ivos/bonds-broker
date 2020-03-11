@@ -1,5 +1,6 @@
 package com.bonds4all.config;
 
+import com.bonds4all.time.TimeService;
 import com.bonds4all.validation.ValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.persistence.EntityNotFoundException;
 import javax.servlet.http.HttpServletRequest;
+import java.time.ZoneId;
 import java.util.Date;
 
 @ControllerAdvice("com.bonds4all")
@@ -15,7 +17,7 @@ public class ExceptionHandler {
 
 	private ErrorResponse createErrorResponse(HttpServletRequest request, HttpStatus status) {
 		ErrorResponse errorResponse = new ErrorResponse();
-		errorResponse.setTimestamp(new Date());
+		errorResponse.setTimestamp(Date.from(TimeService.now().atZone(ZoneId.systemDefault()).toInstant()));
 		errorResponse.setStatus(status.value());
 		errorResponse.setError(status.getReasonPhrase());
 		errorResponse.setPath(request.getRequestURI());

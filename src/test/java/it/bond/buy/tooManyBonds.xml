@@ -1,0 +1,12 @@
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../../../dataset.xsd">
+
+	<bonds/>
+
+	<ip_address_requests id="@auto" effective_date="@date" ip="127.0.0.1"/>
+	<ip_address_requests id="@auto" effective_date="@date" ip="127.0.0.1"/>
+	<ip_address_requests id="@auto" effective_date="@date" ip="127.0.0.1"/>
+	<ip_address_requests id="@auto" effective_date="@date" ip="127.0.0.1"/>
+	<ip_address_requests id="@auto" effective_date="@date" ip="127.0.0.1"/>
+
+</dataset>

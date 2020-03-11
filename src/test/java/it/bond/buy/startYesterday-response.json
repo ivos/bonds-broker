@@ -1,0 +1,13 @@
+{
+  "timestamp": "REPLACED",
+  "status": 422,
+  "error": "Unprocessable Entity",
+  "path": "/api/bonds",
+  "errors": [
+    {
+      "path": "startDate",
+      "value": "2020-03-03",
+      "errorCode": "must be a date in the present or in the future"
+    }
+  ]
+}
