@@ -4,7 +4,7 @@
 - Decimal attributes (amount, rate): rounding errors, precision?
 - Expand personal data beyond Name
 - IP address house-keeping (deleting old records)
-- Switch IP address to cache
+- Switch IP address to cache?
 - Get correct IP address even behind proxy (HTTP headers?)
 - Establish client's identity, then:
     - registration, authentication, authorization (see only my bonds)
@@ -13,5 +13,5 @@
 - Adjust bond with the same End date? Maybe do not create new Bond term?
 - Switch to a production DB?
 - Ensure uniqueness of the Bond Reference on the DB level
-- Deal with empty strings (trim?, mixSize = 1?)
+- Deal with empty strings (trim?, minSize = 1?)
 - Proper logging (aspect?)

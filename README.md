@@ -19,7 +19,7 @@ It's a BNP Paribas Cardif Java developer coding test sample application.
 - Connection pool: Hikari
 - DB migrations: Flyway
 - DB: H2
-- DB tests: Light Air
+- DB tests: [Light Air](http://lightair.sourceforge.net/)
 
 
 ## Commands
