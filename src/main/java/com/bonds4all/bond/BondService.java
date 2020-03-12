@@ -27,8 +27,8 @@ public class BondService {
 	private final BondNightValidator bondNightValidator;
 	private final BondCountValidator bondCountValidator;
 
-	@Value("${bond.interestRate}")
-	private String interestRate;
+	@Value("${bond.defaultInterestRate}")
+	private String defaultInterestRate;
 
 	@Autowired
 	public BondService(BondRepository bondRepository, MapperFacade mapper, Validation validation,
@@ -61,7 +61,7 @@ public class BondService {
 		bond.getTerms().add(bondTerm);
 		bondTerm.setBond(bond);
 		bondTerm.setEffectiveTime(TimeService.now());
-		bondTerm.setInterestRate(new BigDecimal(interestRate));
+		bondTerm.setInterestRate(new BigDecimal(defaultInterestRate));
 
 		bond = bondRepository.save(bond);
 		ipAddressRequestService.create(clientIp);

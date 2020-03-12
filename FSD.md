@@ -83,8 +83,9 @@ of a fictional Bonds4All.com company.
 #### Main success scenario:
 
 1. System validates the request.
-2. System creates new Bond term record.
-3. System sets Bond term Effective time to system current time.
+2. System finds the last Bond term for the Bond Reference.
+3. System creates new Bond term record from the last one found.
+4. System sets Bond term Effective time to system current time.
 
 #### Extensions:
 

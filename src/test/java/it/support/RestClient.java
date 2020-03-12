@@ -93,6 +93,11 @@ public class RestClient {
 			resp = rqSpec.get(path);
 			return new ResponseBuilder(this);
 		}
+
+		public ResponseBuilder patch(String path) {
+			resp = rqSpec.patch(path);
+			return new ResponseBuilder(this);
+		}
 	}
 
 	public static class ResponseBuilder {

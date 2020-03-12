@@ -1,0 +1,19 @@
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../dataset.xsd">
+
+	<bonds id="1419284901" name="name 1" start_date="2020-02-03" amount="@auto" reference="reference-1"/>
+	<bond_terms id="@auto" bond_id="1419284901"/>
+	<bond_terms id="@auto" bond_id="1419284901"/>
+	<!--last bond term-->
+	<bond_terms id="@auto" bond_id="1419284901"/>
+
+
+	<!--other bond-->
+	<bonds id="1419284902"/>
+	<!--higher id, but other bond-->
+	<bond_terms id="@auto" bond_id="1419284902"/>
+
+
+	<!--created-->
+	<bond_terms id="@any" bond_id="1419284901" effective_time="@timestamp" end_date="2026-02-04" interest_rate="0.045"/>
+
+</dataset>

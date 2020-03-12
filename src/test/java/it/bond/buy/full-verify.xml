@@ -1,5 +1,4 @@
-<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="../../../dataset.xsd">
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../dataset.xsd">
 
 	<!--created-->
 	<bonds id="$bondId"
