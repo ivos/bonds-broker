@@ -1,0 +1,20 @@
+{
+  "name": "name 1419236502",
+  "startDate": "2010-11-22",
+  "amount": 1419238.602,
+  "terms": [
+    {
+      "effectiveTime": "2002-02-17T23:28:22.302",
+      "endDate": "2081-10-20",
+      "interestRate": 0.1477255202
+    }, {
+      "effectiveTime": "2002-02-18T23:28:23.303",
+      "endDate": "2081-10-21",
+      "interestRate": 0.1477255203
+    }, {
+      "effectiveTime": "2002-02-19T23:28:24.304",
+      "endDate": "2081-10-22",
+      "interestRate": 0.1477255204
+    }
+  ]
+}

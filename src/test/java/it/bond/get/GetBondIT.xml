@@ -1,0 +1,17 @@
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../dataset.xsd">
+
+	<!--other-->
+	<bonds id="1419284901" name="@auto" start_date="@auto" amount="@auto" reference="@auto"/>
+	<bond_terms id="@auto" bond_id="1419284901" effective_time="@auto" end_date="@auto" interest_rate="@auto"/>
+
+	<!--found-->
+	<bonds id="1419284902" name="@auto" start_date="@auto" amount="@auto" reference="reference-1"/>
+	<bond_terms id="@auto" bond_id="1419284902" effective_time="@auto" end_date="@auto" interest_rate="@auto"/>
+	<bond_terms id="@auto" bond_id="1419284902" effective_time="@auto" end_date="@auto" interest_rate="@auto"/>
+	<bond_terms id="@auto" bond_id="1419284902" effective_time="@auto" end_date="@auto" interest_rate="@auto"/>
+
+	<!--other-->
+	<bonds id="1419284903" name="@auto" start_date="@auto" amount="@auto" reference="@auto"/>
+	<bond_terms id="@auto" bond_id="1419284903" effective_time="@auto" end_date="@auto" interest_rate="@auto"/>
+
+</dataset>

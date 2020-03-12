@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityNotFoundException;
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -68,5 +69,11 @@ public class BondService {
 		bondRepository.flush();
 
 		return bond;
+	}
+
+	@Transactional(readOnly = true)
+	public Bond get(String reference) {
+		return bondRepository.findByReference(reference)
+				.orElseThrow(EntityNotFoundException::new);
 	}
 }

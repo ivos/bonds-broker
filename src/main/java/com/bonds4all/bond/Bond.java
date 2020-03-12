@@ -3,6 +3,7 @@ package com.bonds4all.bond;
 import com.bonds4all.bond_term.BondTerm;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -24,6 +25,7 @@ import java.util.List;
 @Table(name = "bonds")
 @Data
 @EqualsAndHashCode(of = "id")
+@ToString(exclude = "terms")
 public class Bond {
 
 	@Id

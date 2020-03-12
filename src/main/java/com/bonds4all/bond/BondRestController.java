@@ -2,8 +2,10 @@ package com.bonds4all.bond;
 
 import com.bonds4all.bond.dto.BondDtoCreate;
 import com.bonds4all.bond.dto.BondDtoEndDate;
+import com.bonds4all.bond.dto.BondDtoGet;
 import com.bonds4all.bond_term.BondTermService;
 import lombok.extern.slf4j.Slf4j;
+import ma.glasnost.orika.MapperFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,11 +27,13 @@ public class BondRestController {
 
 	private final BondService bondService;
 	private final BondTermService bondTermService;
+	private final MapperFacade mapper;
 
 	@Autowired
-	public BondRestController(BondService bondService, BondTermService bondTermService) {
+	public BondRestController(BondService bondService, BondTermService bondTermService, MapperFacade mapper) {
 		this.bondService = bondService;
 		this.bondTermService = bondTermService;
+		this.mapper = mapper;
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
@@ -55,7 +59,14 @@ public class BondRestController {
 	public void adjustBond(
 			@PathVariable String reference,
 			@RequestBody BondDtoEndDate dto) {
-		log.info("Adjust bond, {}, {}", reference, dto);
+		log.info("Adjust bond {}, {}", reference, dto);
 		bondTermService.updateEndDate(reference, dto);
+	}
+
+	@RequestMapping(path = "/{reference}", method = RequestMethod.GET)
+	public BondDtoGet getBond(@PathVariable String reference) {
+		log.info("Get bond {}", reference);
+		Bond bond = bondService.get(reference);
+		return mapper.map(bond, BondDtoGet.class);
 	}
 }
