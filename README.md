@@ -4,11 +4,13 @@ This is Bonds Broker backend application of a fictional Bonds4All.com company.
 
 It's a BNP Paribas Cardif Java developer coding test sample application.
 
+## Requirements
+
+Start by reading [the requirements](./REQUIREMENTS.md).
 
 ## FSD
 
-**Please start by reading [the Functional Specification Document](./FSD.md).**
-
+The requirements imply the following [Functional Specification Document](./FSD.md).
 
 ## Tech stack
 
