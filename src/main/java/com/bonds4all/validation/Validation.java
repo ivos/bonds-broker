@@ -1,6 +1,5 @@
 package com.bonds4all.validation;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.validation.Validator;
@@ -11,8 +10,11 @@ import java.util.stream.Collectors;
 @Component
 public class Validation {
 
-	@Autowired
-	private Validator validator;
+	private final Validator validator;
+
+	public Validation(Validator validator) {
+		this.validator = validator;
+	}
 
 	/**
 	 * Perform bean validations (JSR-303).

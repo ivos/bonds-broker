@@ -3,6 +3,7 @@ package com.bonds4all.bond.dto;
 import lombok.Data;
 
 import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
@@ -16,6 +17,7 @@ public class BondDtoCreate {
 	private String name;
 
 	@NotNull
+	@FutureOrPresent
 	private LocalDate startDate;
 
 	@NotNull

@@ -3,7 +3,6 @@ package com.bonds4all.bond;
 import com.bonds4all.bond.dto.BondDtoCreate;
 import com.bonds4all.bond_term.BondTerm;
 import com.bonds4all.ip_address_request.IpAddressRequestService;
-import com.bonds4all.time.FutureOrPresentValidator;
 import com.bonds4all.time.TimeService;
 import com.bonds4all.validation.Validation;
 import ma.glasnost.orika.MapperFacade;
@@ -24,7 +23,6 @@ public class BondService {
 	private final Validation validation;
 	private final IpAddressRequestService ipAddressRequestService;
 	private final BondTermLengthValidator bondTermLengthValidator;
-	private final FutureOrPresentValidator futureOrPresentValidator;
 	private final BondNightValidator bondNightValidator;
 	private final BondCountValidator bondCountValidator;
 
@@ -34,14 +32,12 @@ public class BondService {
 	@Autowired
 	public BondService(BondRepository bondRepository, MapperFacade mapper, Validation validation,
 			IpAddressRequestService ipAddressRequestService, BondTermLengthValidator bondTermLengthValidator,
-			FutureOrPresentValidator futureOrPresentValidator, BondNightValidator bondNightValidator,
-			BondCountValidator bondCountValidator) {
+			BondNightValidator bondNightValidator, BondCountValidator bondCountValidator) {
 		this.bondRepository = bondRepository;
 		this.mapper = mapper;
 		this.validation = validation;
 		this.ipAddressRequestService = ipAddressRequestService;
 		this.bondTermLengthValidator = bondTermLengthValidator;
-		this.futureOrPresentValidator = futureOrPresentValidator;
 		this.bondNightValidator = bondNightValidator;
 		this.bondCountValidator = bondCountValidator;
 	}
@@ -53,7 +49,6 @@ public class BondService {
 		Bond bond = mapper.map(dto, Bond.class);
 		BondTerm bondTerm = mapper.map(dto, BondTerm.class);
 
-		futureOrPresentValidator.verify(bond.getStartDate(), "startDate");
 		bondTermLengthValidator.verify(bond, bondTerm);
 		bondNightValidator.verify(bond);
 		bondCountValidator.verify(clientIp);
