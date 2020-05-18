@@ -7,6 +7,8 @@ import org.apache.http.HttpStatus;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static it.support.RestClient.TIMESTAMP_REPLACER;
+
 @RunWith(LightAir.class)
 @Setup
 public class GetBondIT {
@@ -31,8 +33,7 @@ public class GetBondIT {
 	public void notFound() {
 		RestClient.from(this)
 				.get(getPath("reference-666"))
-				.responseName("notFound", ctx -> ctx
-						.set("$.timestamp", "REPLACED"))
+				.responseName("notFound", TIMESTAMP_REPLACER)
 				.statusCode(HttpStatus.SC_NOT_FOUND);
 	}
 }

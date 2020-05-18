@@ -8,6 +8,8 @@ import org.apache.http.HttpStatus;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static it.support.RestClient.TIMESTAMP_REPLACER;
+
 @RunWith(LightAir.class)
 @Setup
 @Verify
@@ -39,8 +41,7 @@ public class AdjustBondIT {
 		RestClient.from(this)
 				.requestName(request)
 				.patch(getPath("reference-1"))
-				.responseName(request, ctx -> ctx
-						.set("$.timestamp", "REPLACED"))
+				.responseName(request, TIMESTAMP_REPLACER)
 				.statusCode(HttpStatus.SC_UNPROCESSABLE_ENTITY);
 	}
 
@@ -71,8 +72,7 @@ public class AdjustBondIT {
 		RestClient.from(this)
 				.requestName("shortenTerm")
 				.patch(getPath("reference-666"))
-				.responseName("notFound", ctx -> ctx
-						.set("$.timestamp", "REPLACED"))
+				.responseName("notFound", TIMESTAMP_REPLACER)
 				.statusCode(HttpStatus.SC_NOT_FOUND);
 	}
 }

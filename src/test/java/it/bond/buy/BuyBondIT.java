@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static it.support.RestClient.TIMESTAMP_REPLACER;
 import static org.hamcrest.Matchers.matchesRegex;
 
 @RunWith(LightAir.class)
@@ -57,8 +58,7 @@ public class BuyBondIT {
 		RestClient.from(this)
 				.requestName(request)
 				.post(PATH)
-				.responseName(response, ctx -> ctx
-						.set("$.timestamp", "REPLACED"))
+				.responseName(response, TIMESTAMP_REPLACER)
 				.statusCode(HttpStatus.SC_UNPROCESSABLE_ENTITY);
 	}
 

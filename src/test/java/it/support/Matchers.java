@@ -14,29 +14,6 @@ import static org.junit.Assert.assertEquals;
 public class Matchers {
 
 	/**
-	 * Wraps {@link IsEqual} matcher
-	 * and calls {@link org.junit.Assert#assertEquals(Object, Object)} when the values are not equal.
-	 * <p>
-	 * This provides proper IDE integration: the ability to compare expected and actual values in IDE side-by-side.
-	 *
-	 * @param expected expected value
-	 * @param <T>      type
-	 * @return matcher
-	 */
-	public static <T> org.hamcrest.Matcher<T> assertEqualTo(final T expected) {
-		return new IsEqual<T>(expected) {
-			@Override
-			public boolean matches(Object actual) {
-				boolean match = super.matches(actual);
-				if (!match) {
-					assertEquals(expected, actual);
-				}
-				return match;
-			}
-		};
-	}
-
-	/**
 	 * Asserts that values are equal JSON Strings.
 	 *
 	 * @param templateFilename template filename
