@@ -18,7 +18,7 @@
 		<java.version>1.8</java.version>
 
 		<springfox.version>2.9.2</springfox.version>
-		<h2.version>1.4.196</h2.version>
+		<h2.version>2.1.210</h2.version>
 
 		<db.url>jdbc:h2:file:./data/bonds-broker;MVCC=TRUE;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=true</db.url>
 		<db.user>sa</db.user>
